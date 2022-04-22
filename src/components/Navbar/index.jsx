@@ -13,7 +13,6 @@ const Navbar = () => {
         width="full"
         height="full"
         margin="auto"
-        paddingX={22}
       >
         <Logo />
         <Nav />
