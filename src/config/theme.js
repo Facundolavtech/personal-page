@@ -12,7 +12,7 @@ const theme = extendTheme({
       const isLightMode = colorMode === "light";
       return {
         body: {
-          backgroundColor: isLightMode && "#EFFFFD",
+          backgroundColor: isLightMode && "#f8fffe",
         },
       };
     },

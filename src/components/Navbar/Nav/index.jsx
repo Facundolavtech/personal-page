@@ -8,7 +8,7 @@ const Nav = () => {
     <nav>
       <ul>
         <Stack direction="row" alignItems="center" spacing="10">
-          {Links.map((link) => (
+          {Links?.map((link) => (
             <NavLink text={link.text} key={link.id} />
           ))}
           <ToggleThemeButton />
