@@ -1,16 +1,12 @@
 import SEO from "../components/SEO";
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Portfolio from "../components/Portfolio";
 
 const Home = () => {
   return (
     <>
-      <SEO title="Facundo Lavagnino - Personal Page" />
-      <Navbar />
+      <SEO title="Facundo Lavagnino - Blog" />
       <main>
         <Hero />
-        <Portfolio />
       </main>
     </>
   );
