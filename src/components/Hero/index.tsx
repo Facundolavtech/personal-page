@@ -7,23 +7,21 @@ import {
 } from "@chakra-ui/react";
 import HeroContact from "./Contact";
 import HeroPicture from "./Picture";
-import SocialsHelper from "./Socials/Data";
+import SocialsHelper from "./Socials/helper";
 import SocialLink from "./Socials/Link";
 import HeroTitle from "./Title";
 
 const Hero = () => {
   return (
-    <Container width="full" as="section" bg="gray.800">
+    <Container as="section" bg="gray.800">
       <SimpleGrid
-        width="full"
-        maxWidth="90%"
         margin="auto"
+        className="wrapped"
         height="full"
         columns={{ base: 1, md: 2 }}
-        padding={{ base: 6, md: 12 }}
         overflow="hidden"
         gap={16}
-        py={12}
+        py={16}
       >
         <VStack
           spacing={8}
@@ -42,10 +40,7 @@ const Hero = () => {
               );
             })}
           </HStack>
-          <VStack
-            width="full"
-            alignItems={{ base: "center", md: "flex-start" }}
-          >
+          <VStack alignItems={{ base: "center", md: "flex-start" }}>
             <HeroContact />
           </VStack>
           <Button bg="white" padding={6} color="primary" margin="auto">

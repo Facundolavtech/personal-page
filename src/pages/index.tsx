@@ -1,5 +1,6 @@
 import SEO from "../components/SEO";
 import Hero from "../components/Hero";
+import HomeTabs from "../components/HomeTabs";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <SEO title="Facundo Lavagnino - Blog" />
       <main>
         <Hero />
+        <HomeTabs />
       </main>
     </>
   );

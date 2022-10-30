@@ -1,22 +1,19 @@
-import { Box } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Image } from "@chakra-ui/react";
 
 const HeroPicture = () => {
   return (
     <Box
       position="relative"
       borderRadius="full"
-      width={{ base: 300, md: 500 }}
-      height={{ base: 480, md: 580 }}
+      maxW="full"
       overflow="hidden"
       margin="auto"
       gridRow={{ base: 1, md: 1 }}
     >
       <Image
-        layout="fill"
         objectFit="contain"
         style={{
-          filter: "grayscale(30%)",
+          filter: "grayscale(60%)",
         }}
         src="/assets/img/hero-img.png"
         alt="Personal picture"

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import NextDocument, { Head, Html, Main, NextScript } from "next/document";
 import { ColorModeScript } from "@chakra-ui/react";
 
