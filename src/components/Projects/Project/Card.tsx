@@ -18,11 +18,12 @@ import { MdOpenInNew } from "react-icons/md";
 type Props = {
   title: string;
   description: string;
+  cover: string;
   page: string;
   code?: string;
 };
 
-const ProjectCard: FC<Props> = ({ title, description, page, code }) => {
+const ProjectCard: FC<Props> = ({ title, cover, description, page, code }) => {
   return (
     <Stack
       width="full"
@@ -33,12 +34,7 @@ const ProjectCard: FC<Props> = ({ title, description, page, code }) => {
     >
       <SimpleGrid columns={{ base: 1, md: 2 }} columnGap={8} rowGap={8}>
         <Box>
-          <Image
-            objectFit="contain"
-            borderRadius={6}
-            src="/assets/img/redtrader.png"
-            alt="Redtrader Project"
-          />
+          <Image objectFit="contain" borderRadius={6} src={cover} alt={title} />
         </Box>
         <VStack spacing={8} alignItems="flex-start">
           <VStack spacing={4} alignItems="flex-start">
