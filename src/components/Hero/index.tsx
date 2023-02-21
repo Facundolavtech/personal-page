@@ -4,7 +4,12 @@ import {
   VStack,
   HStack,
   SimpleGrid,
+  Show,
+  Center,
+  Box,
 } from "@chakra-ui/react";
+import downloadCV from "../../utils/downloadCV";
+import MouseScroll from "../MouseScroll";
 import HeroContact from "./Contact";
 import HeroPicture from "./Picture";
 import SocialsHelper from "./Socials/helper";
@@ -20,7 +25,7 @@ const Hero = () => {
         height="full"
         columns={{ base: 1, md: 2 }}
         overflow="hidden"
-        gap={16}
+        gap={{ base: 0, md: 16 }}
         py={16}
       >
         <VStack
@@ -43,11 +48,22 @@ const Hero = () => {
           <VStack alignItems={{ base: "center", md: "flex-start" }}>
             <HeroContact />
           </VStack>
-          <Button bg="white" padding={6} color="primary" margin="auto">
+          <Button
+            bg="white"
+            padding={6}
+            color="primary"
+            margin="auto"
+            onClick={downloadCV}
+          >
             Download CV
           </Button>
+          <Center width={{ base: "full", md: "25%" }}>
+            <MouseScroll href="#articles" />
+          </Center>
         </VStack>
-        <HeroPicture />
+        <Show above="md">
+          <HeroPicture />
+        </Show>
       </SimpleGrid>
     </Container>
   );
