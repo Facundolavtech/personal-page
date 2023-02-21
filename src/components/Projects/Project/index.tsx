@@ -27,7 +27,7 @@ const ProjectCard: FC<Props> = ({ title, cover, description, page, code }) => {
   return (
     <Stack
       width="full"
-      padding={10}
+      padding={{ base: 6, md: 10 }}
       border="1px solid rgba(0,0,0,0.1)"
       borderRadius={6}
       bg="gray.800"
@@ -45,7 +45,7 @@ const ProjectCard: FC<Props> = ({ title, cover, description, page, code }) => {
             >
               {title}
             </Heading>
-            <Text color="whiteAlpha.700" fontSize={{ base: 18, md: 20 }}>
+            <Text color="whiteAlpha.700" fontSize={{ base: 16, md: 20 }}>
               {description}
             </Text>
           </VStack>
