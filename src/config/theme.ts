@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import { tabsTheme } from "./tabs";
 
 const theme = extendTheme({
   breakpoints: {
@@ -14,6 +15,7 @@ const theme = extendTheme({
         margin: 0,
       },
     },
+    Tabs: tabsTheme,
   },
   colors: {
     primary: "#ff014f",
