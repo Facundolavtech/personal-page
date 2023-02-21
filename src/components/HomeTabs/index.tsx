@@ -18,14 +18,9 @@ import Technologies from "../Technologies";
 
 const HomeTabs = () => {
   return (
-    <Stack className="wrapped" my={12} as="section">
-      <Tabs
-        isLazy
-        defaultIndex={0}
-        variant="enclosed-colored"
-        borderBottomWidth={0}
-      >
-        <TabList display="flex" gap={3}>
+    <Stack className="wrapped" my={12} as="section" id="articles">
+      <Tabs isLazy defaultIndex={0} variant="enclosed-colored">
+        <TabList display="flex" gap={3} borderBottom="none">
           <Tab
             bg="white"
             color="gray.800"
