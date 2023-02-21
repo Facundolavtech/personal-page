@@ -18,7 +18,7 @@ import {
 import { DiCss3, DiMongodb, DiPostgresql } from "react-icons/di";
 import { AiFillPieChart } from "react-icons/ai";
 
-const TechsHelper = [
+const TechnologiesList = [
   {
     icon: FaHtml5,
     label: "HTML5",
@@ -93,4 +93,4 @@ const TechsHelper = [
   },
 ];
 
-export default TechsHelper;
+export default TechnologiesList;
