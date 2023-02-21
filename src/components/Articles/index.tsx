@@ -1,34 +1,10 @@
-import { useState, useEffect } from "react";
-import { HStack, Icon, Skeleton, Text, VStack } from "@chakra-ui/react";
+import { HStack, Icon, Spinner, Text, VStack } from "@chakra-ui/react";
 import Article from "./Article";
 import { MdError } from "react-icons/md";
+import useArticles from "../../hooks/useArticles";
 
 const Articles = () => {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const fetchArticles = () => {
-      fetch(
-        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@flavtech"
-      )
-        .then((res) => {
-          res.json().then((res) => {
-            if (res.status === "error") {
-              return setError(true);
-            }
-            setArticles(res.items);
-          });
-        })
-        .catch(() => {
-          setError(true);
-        })
-        .finally(() => setLoading(false));
-    };
-
-    fetchArticles();
-  }, []);
+  const { articles, loading, error } = useArticles();
 
   if (error) {
     return (
@@ -47,21 +23,19 @@ const Articles = () => {
     );
   }
 
-  if (loading || !articles) {
+  if (articles && !loading) {
     return (
       <VStack spacing={10} mt={14}>
-        {new Array(4).fill(4).map((_, index) => {
-          return <Skeleton key={index} width="full" height={300} />;
-        })}
+        {articles.map((item) => (
+          <Article key={item.title} article={item} />
+        ))}
       </VStack>
     );
   }
 
   return (
-    <VStack spacing={10} mt={14}>
-      {articles.map((item) => {
-        return <Article key={item.title} article={item} />;
-      })}
+    <VStack mt={14}>
+      <Spinner size="lg" color="gray.800" />
     </VStack>
   );
 };
