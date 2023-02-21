@@ -2,9 +2,7 @@ import { FC } from "react";
 import {
   Badge,
   Heading,
-  HStack,
   Image,
-  SimpleGrid,
   Stack,
   VStack,
   Wrap,

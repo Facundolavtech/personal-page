@@ -1,6 +1,6 @@
 import { VStack } from "@chakra-ui/react";
 import React from "react";
-import ProjectCard from "./Project/Card";
+import ProjectCard from "./Project";
 
 const Projects = () => {
   return (
