@@ -1,29 +1,29 @@
 import { AiFillGithub, AiOutlineMedium } from "react-icons/ai";
 import { BsStackOverflow } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import constants from "../../../config/constants";
+import config from "../../../config";
 
-const SocialsHelper = [
+const SocialsList = [
   {
     id: 1,
-    href: constants.linkedin,
+    href: config.linkedin,
     icon: FaLinkedinIn,
   },
   {
     id: 2,
-    href: constants.github,
+    href: config.github,
     icon: AiFillGithub,
   },
   {
     id: 3,
-    href: constants.medium,
+    href: config.medium,
     icon: AiOutlineMedium,
   },
   {
     id: 4,
-    href: constants.stackoverflow,
+    href: config.stackoverflow,
     icon: BsStackOverflow,
   },
 ];
 
-export default SocialsHelper;
+export default SocialsList;
