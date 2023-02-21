@@ -6,13 +6,12 @@ import {
   SimpleGrid,
   Show,
   Center,
-  Box,
 } from "@chakra-ui/react";
 import downloadCV from "../../utils/downloadCV";
 import MouseScroll from "../MouseScroll";
 import HeroContact from "./Contact";
 import HeroPicture from "./Picture";
-import SocialsHelper from "./Socials/helper";
+import SocialsList from "./Socials/socials";
 import SocialLink from "./Socials/Link";
 import HeroTitle from "./Title";
 
@@ -39,11 +38,9 @@ const Hero = () => {
             <HeroTitle />
           </VStack>
           <HStack spacing={4}>
-            {SocialsHelper.map((item) => {
-              return (
-                <SocialLink key={item.id} href={item.href} icon={item.icon} />
-              );
-            })}
+            {SocialsList.map((item) => (
+              <SocialLink key={item.id} href={item.href} icon={item.icon} />
+            ))}
           </HStack>
           <VStack alignItems={{ base: "center", md: "flex-start" }}>
             <HeroContact />
