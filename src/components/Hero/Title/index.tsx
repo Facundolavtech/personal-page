@@ -18,7 +18,7 @@ const HeroTitle = () => {
         fontSize={{ base: 20, md: 24 }}
         textAlign={{ base: "center", md: "left" }}
       >
-        Full Stack Engineer, Blockchain Developer, Technical Writer
+        Frontend & Blockchain Developer, Technical Writer
       </Text>
     </>
   );
